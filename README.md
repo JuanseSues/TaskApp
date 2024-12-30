@@ -4,6 +4,26 @@ This project is a task management application built using Ionic and Angular fram
 
 The Task Management App allows users to create, update, and delete tasks, providing a seamless and efficient way to organize daily activities. It leverages the power of Ionic for cross-platform mobile development and Angular for robust web application architecture.
 
+## Git and GitHub Workflow
+
+This section explains how to work with Git and GitHub for the Task Management App repository: https://github.com/JuanseSues/TaskApp
+
+### Cloning the Repository
+
+To get started with the project, clone the repository to your local machine:
+
+```
+git clone https://github.com/JuanseSues/TaskApp.git
+cd TaskApp
+```
+
+
+### Creating a Pull Request
+
+1. Go to the GitHub repository page: https://github.com/JuanseSues/TaskApp
+2. Click on "Pull requests" and then "New pull request"
+
+
 ## Repository Structure
 
 ```
