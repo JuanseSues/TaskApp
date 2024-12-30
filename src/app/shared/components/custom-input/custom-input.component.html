@@ -1,24 +1,28 @@
 <!-- Regular input-->
 <ion-item *ngIf="type !== 'textarea'" class="ion-margin-vertical">
 
+  <!-- Icon for the input, displayed if the icon is provided -->
   <ion-icon color="primary" *ngIf="icon" slot="start" [name]="icon"></ion-icon>
 
+  <!-- Floating label for the input -->
   <ion-label position="floating">{{label}}</ion-label>
 
+  <!-- Input field with debounce, autocomplete, and form control binding -->
   <ion-input debounce="500" [autocomplete]="autocomplete" [type]="type" [formControl]="control"></ion-input>
 
+  <!-- Buttons for showing or hiding the password, displayed if the input is a password field -->
   <ion-buttons *ngIf="isPassword" slot="end">
-
     <ion-button (click)="showOrHidePassword()">
       <ion-icon [name]="hide ? 'eye-outline' : 'eye-off-outline'"></ion-icon>
     </ion-button>
-
   </ion-buttons>
 
 </ion-item> 
 
 <!-- Textarea-->
 <ion-item *ngIf="type == 'textarea'" class="ion-margin-vertical">
+  <!-- Floating label for the textarea -->
   <ion-label position="floating">{{label}}</ion-label>
+  <!-- Textarea field with auto-grow, debounce, and form control binding -->
   <ion-textarea auto-grow="true" debounce="500" [formControl]="control"></ion-textarea>
 </ion-item>

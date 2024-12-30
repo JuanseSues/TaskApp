@@ -1,26 +1,33 @@
-ion-card{
-    border-radius: 15px;
-    padding: 10px;
-    min-height: 200px;
-    border: 1px solid rgba(255, 255, 255, 0.168);
+// Styles for the home page
+
+// Styles for ion-card elements
+ion-card {
+    border-radius: 15px; // Rounded corners for the card
+    padding: 10px;       // Padding inside the card
+    min-height: 200px;   // Minimum height for the card
+    border: 1px solid rgba(255, 255, 255, 0.168); // Semi-transparent border
 }
 
+// Hover effect for ion-card elements
 ion-card:hover {
-    cursor: pointer;
-    background: var(--ion-color-light);
+    cursor: pointer; // Change cursor to pointer on hover
+    background: var(--ion-color-light); // Change background color on hover
 }
 
+// Styles for the title class
 .title {
-    font-size: 18px;
-    font-weight: bold;
-    padding-top: 10px;
-    line-height: 20px;
+    font-size: 18px;      // Font size for the title
+    font-weight: bold;    // Bold font weight for the title
+    padding-top: 10px;    // Padding at the top of the title
+    line-height: 20px;    // Line height for the title
 }
 
+// Styles for the task-btn class
 .task-btn {
-    width: 120px;
+    width: 120px; // Fixed width for task buttons
 }
 
+// Styles for the empty class
 .empty {
-    padding: 15vh;
+    padding: 15vh; // Padding for the empty state message
 }

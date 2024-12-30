@@ -3,28 +3,26 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
 
+// Define the routes for the TabsPage
 const routes: Routes = [
   {
-    path: '',
+    path: '', // Default path for the TabsPage
     component: TabsPage,
     children: [
       {
-        path: 'home',
-        loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+        path: 'home', // Path for the home page
+        loadChildren: () => import('./home/home.module').then(m => m.HomePageModule) // Lazy load the HomePageModule
       },
       {
-        path: 'profile',
-        loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+        path: 'profile', // Path for the profile page
+        loadChildren: () => import('./profile/profile.module').then(m => m.ProfilePageModule) // Lazy load the ProfilePageModule
       }
-
     ]
-  },
-  
-
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  imports: [RouterModule.forChild(routes)], // Import the RouterModule and configure it with the routes
+  exports: [RouterModule],                  // Export the RouterModule so it can be used in other parts of the application
 })
 export class TabsPageRoutingModule {}

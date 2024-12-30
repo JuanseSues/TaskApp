@@ -1,14 +1,17 @@
-
 <ion-content>
+  <!-- Custom header component with the title "Perfil" -->
   <app-header title="Perfil"></app-header>
 
   <div class="content ion-text-center">
 
+    <!-- User avatar icon -->
     <ion-icon class="avatar" name="person-circle-outline"></ion-icon>
+    <!-- Display the user's name -->
     <h2>{{ user.name }}</h2>
+    <!-- Display the user's email -->
     <div>{{user.email}}</div>
 
-
+    <!-- Button to sign out -->
     <ion-button (click)="signOut()" shape="round">
       Sign Out
       <ion-icon slot="end" name="log-out-outline"></ion-icon>

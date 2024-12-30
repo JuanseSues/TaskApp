@@ -11,19 +11,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { AngularFirestoreModule  } from '@angular/fire/compat/firestore';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent], // Declare the AppComponent
   imports: [
-    BrowserModule, 
-    IonicModule.forRoot({mode: 'md'}), 
-    AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-    AngularFirestoreModule
+    BrowserModule, // Import BrowserModule for browser-specific services
+    IonicModule.forRoot({ mode: 'md' }), // Import IonicModule and set the mode to 'md' (Material Design)
+    AppRoutingModule, // Import AppRoutingModule for routing
+    AngularFireModule.initializeApp(environment.firebaseConfig), // Initialize AngularFire with Firebase configuration
+    AngularFireAuthModule, // Import AngularFireAuthModule for Firebase authentication
+    AngularFirestoreModule // Import AngularFirestoreModule for Firestore database operations
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }], // Provide the IonicRouteStrategy for route reuse
+  bootstrap: [AppComponent], // Bootstrap the AppComponent
 })
 export class AppModule {}

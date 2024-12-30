@@ -11,21 +11,24 @@ import { UtilsService } from './utils.service';
 export class FirebaseService {
 
   constructor(
-    private auth: AngularFireAuth,
-    private db: AngularFirestore,
-    private utilsSvc: UtilsService
+    private auth: AngularFireAuth, // Inject AngularFireAuth service for authentication
+    private db: AngularFirestore,  // Inject AngularFirestore service for Firestore database operations
+    private utilsSvc: UtilsService // Inject utility service for common operations
   ) { }
 
   // ------Auth------
 
+  // Method to log in a user
   login(user: User){
     return this.auth.signInWithEmailAndPassword(user.email, user.password);
   }
 
+  // Method to sign up a new user
   signUp(user: User){
     return this.auth.createUserWithEmailAndPassword(user.email, user.password);
   }
 
+  // Method to update the user's profile
   async updateUser(user: any){
     const currentUser = await this.auth.currentUser;
     if (currentUser) {
@@ -33,30 +36,36 @@ export class FirebaseService {
     }
   }
 
+  // Method to get the authentication state
   getAuthState(){
     return this.auth.authState;
   }
 
+  // Method to sign out the user
   async signOut(){
     await this.auth.signOut();
-    this.utilsSvc.routerLink('/auth');
-    localStorage.removeItem('user');
+    this.utilsSvc.routerLink('/auth'); // Redirect to the authentication page
+    localStorage.removeItem('user');   // Remove user data from local storage
   }
 
   // ------Firestore Database------
 
+  // Method to get a sub-collection from Firestore
   getSubCollection(path: string, subcollectionName: string){
     return this.db.doc(path).collection(subcollectionName).valueChanges({idField: 'id'});
   }
 
+  // Method to add an object to a sub-collection in Firestore
   addToSubCollection(path: string, subcollectionName: string, object: any){
-    return this.db.doc(path).collection(subcollectionName).add(object)
+    return this.db.doc(path).collection(subcollectionName).add(object);
   }
 
-  updateDocument(path: string, object:any){
+  // Method to update a document in Firestore
+  updateDocument(path: string, object: any){
     return this.db.doc(path).update(object);
   }
 
+  // Method to delete a document from Firestore
   deleteDocument(path: string){
     return this.db.doc(path).delete();
   }

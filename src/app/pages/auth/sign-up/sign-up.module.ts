@@ -11,12 +11,12 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    SignUpPageRoutingModule,
-    SharedModule
+    CommonModule,             // Provides common directives like ngIf and ngFor
+    FormsModule,              // Provides support for template-driven forms
+    IonicModule,              // Provides Ionic components and services
+    SignUpPageRoutingModule,  // Configures routing for the SignUpPage
+    SharedModule              // Imports shared components, directives, and pipes
   ],
-  declarations: [SignUpPage]
+  declarations: [SignUpPage]  // Declares the SignUpPage component
 })
 export class SignUpPageModule {}

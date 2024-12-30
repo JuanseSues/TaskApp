@@ -1,17 +1,20 @@
+// Styles for the sign-up page
 
-.sign-up{
+// Apply padding to the sign-up container
+.sign-up {
     padding: 50px;
 }
 
+// Set a fixed width for ion-button elements
 ion-button {
     width: 170px;
 }
 
-
-
-@media (min-width: 768px){
+// Media query for screens with a minimum width of 768px
+@media (min-width: 768px) {
+    // Apply styles to the form element
     form {
-        width: 500px;
-        padding: 50px 10px;
+        width: 500px;          // Set the width of the form
+        padding: 50px 10px;    // Apply padding to the form
     }
 }

@@ -1,47 +1,57 @@
+<ion-content>
 
-<ion-content >
-
+  <!-- Custom header component with a back button that navigates to the /auth route -->
   <app-header backButton="/auth"></app-header>
+  
+  <!-- Custom logo component -->
   <app-logo></app-logo>
 
+  <!-- Registration title centered with no margin -->
   <h2 class="ion-text-center ion-no-margin">Registration</h2>
 
   <div class="content">
 
     <div class="d-flex-center">
+      <!-- Form that triggers the submit() method on enter key press or form submission -->
       <form (keyup.enter)="submit()" (ngSubmit)="submit()" class="ion-text-center">
 
+        <!-- Custom input component for the user's name -->
         <app-custom-input autocomplete="name" [control]="form.controls.name" type="text" label="Name" icon="person-outline"></app-custom-input>
+        <!-- Validation messages for the name input -->
         <div class="validators" *ngIf="form.controls.name.errors && form.controls.name.dirty">
           <div *ngIf="form.controls.name.errors?.['required']">Enter your Name</div>
           <div *ngIf="form.controls.name.errors?.['minlength']">Enter a valid name</div>
         </div>
 
-
-
+        <!-- Custom input component for the user's email -->
         <app-custom-input autocomplete="email" [control]="form.controls.email" type="email" label="Email" icon="mail-outline"></app-custom-input>
+        <!-- Validation messages for the email input -->
         <div class="validators" *ngIf="form.controls.email.errors && form.controls.email.dirty">
           <div *ngIf="form.controls.email.errors?.['required']">Enter your email</div>
           <div *ngIf="form.controls.email.errors?.['email']">Enter a valid email</div>
         </div>
   
+        <!-- Custom input component for the user's password -->
         <app-custom-input [control]="form.controls.password" type="password" label="Password" icon="lock-closed-outline"></app-custom-input>
+        <!-- Validation messages for the password input -->
         <div class="validators" *ngIf="form.controls.password.errors && form.controls.password.dirty">
           <div *ngIf="form.controls.password.errors?.['required']">Enter your password</div>
         </div>
 
+        <!-- Custom input component for confirming the user's password -->
         <app-custom-input [control]="form.controls.confirmPassword" type="password" label="Confirm Password" icon="checkmark-circle-outline"></app-custom-input>
+        <!-- Validation messages for the confirm password input -->
         <div class="validators" *ngIf="form.controls.confirmPassword.errors && form.controls.password.dirty">
           <div *ngIf="form.controls.confirmPassword.errors?.['required']">Enter your password</div>
           <div *ngIf="form.controls.confirmPassword.errors?.['noMatch']">Password doesn't match</div>
         </div>
   
+        <!-- Submit button for the form, disabled if the form is invalid -->
         <ion-button class="ion-margin-vertical" [disabled]="form.invalid" type="submit" shape="round">
           Register
           <ion-icon slot="end" name="person-add-outline"></ion-icon>
         </ion-button>
 
-  
       </form>
     </div>
     

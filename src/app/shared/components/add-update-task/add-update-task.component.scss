@@ -1,23 +1,29 @@
+// Styles for the add-update-task component
+
+// Styles for the item header
 .item-header {
-    --padding-top: 30px;
+    --padding-top: 30px; // Padding at the top of the item header
 
     ion-label {
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 18px;   // Font size for the label
+        font-weight: bold; // Bold font weight for the label
     }
 }
 
+// Styles for the ion-range component
 ion-range {
-    --bar-background: rgba(128, 128, 128, 0.151);
-    --bar-background-active: var(--ion-color-success);
-    --height: 20px;
-    --knob-size: 10px;
+    --bar-background: rgba(128, 128, 128, 0.151); // Background color for the range bar
+    --bar-background-active: var(--ion-color-success); // Active background color for the range bar
+    --height: 20px; // Height of the range bar
+    --knob-size: 10px; // Size of the knob
 }
 
+// Styles for the item reorder handle
 .item-reorder {
-    --min-height: 32px;
+    --min-height: 32px; // Minimum height for the reorder handle
 }
 
+// Styles for the ion-footer component
 ion-footer {
-    background: var(--ion-color-light);
+    background: var(--ion-color-light); // Background color for the footer
 }

@@ -11,12 +11,12 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    AuthPageRoutingModule,
-    SharedModule
+    CommonModule,             // Provides common directives like ngIf and ngFor
+    FormsModule,              // Provides support for template-driven forms
+    IonicModule,              // Provides Ionic components and services
+    AuthPageRoutingModule,    // Configures routing for the AuthPage
+    SharedModule              // Imports shared components, directives, and pipes
   ],
-  declarations: [AuthPage]
+  declarations: [AuthPage]    // Declares the AuthPage component
 })
 export class AuthPageModule {}
