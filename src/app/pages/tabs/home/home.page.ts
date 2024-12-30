@@ -30,6 +30,8 @@ export class HomePage implements OnInit {
     
   }
 
+  
+
   // Lifecycle hook that is called when the view is about to enter and become the active view
   ionViewWillEnter() {
     this.getTasks(); // Fetch tasks

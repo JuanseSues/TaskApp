@@ -18,6 +18,8 @@ The Task Management App allows users to create, update, and delete tasks, provid
 │   │   └── utils/
 │   ├── environments/
 │   └── theme/
+├── android/
+├── ios/
 ├── angular.json
 ├── capacitor.config.ts
 ├── ionic.config.json
@@ -82,6 +84,49 @@ deleteTask(task: Task) {
 ### Testing & Quality
 
 Run `ng test` to execute the unit tests via Karma.
+
+## Compiling and Executing the App
+
+### Android
+
+#### Compiling for Android
+
+1. Ensure you have Android Studio and the Android SDK installed.
+2. Run `ionic capacitor add android` to add the Android platform if not already added.
+3. Run `ionic capacitor sync android` to sync your app with the Android project.
+4. Run `ionic capacitor build android` to compile the app for Android.
+
+#### Running on Android Emulator
+
+1. Open Android Studio and launch an emulator.
+2. Run `ionic capacitor run android` to build and run the app on the emulator.
+
+#### Running on Android Device
+
+1. Enable USB debugging on your Android device.
+2. Connect your device to your computer via USB.
+3. Run `ionic capacitor run android --device` to build and run the app on your connected device.
+
+### iOS
+
+#### Compiling for iOS
+
+1. Ensure you have Xcode installed (Mac only).
+2. Run `ionic capacitor add ios` to add the iOS platform if not already added.
+3. Run `ionic capacitor sync ios` to sync your app with the iOS project.
+4. Run `ionic capacitor build ios` to compile the app for iOS.
+
+#### Running on iOS Simulator
+
+1. Run `ionic capacitor run ios` to build and run the app on the iOS simulator.
+
+#### Running on iOS Device
+
+1. Open the iOS project in Xcode by running `ionic capacitor open ios`.
+2. In Xcode, select your connected iOS device as the run target.
+3. Click the play button or press Cmd+R to build and run the app on your device.
+
+Note: For iOS, you'll need an Apple Developer account to run the app on a physical device.
 
 ### Troubleshooting
 
