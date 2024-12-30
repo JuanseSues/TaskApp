@@ -227,3 +227,85 @@ export class AppModule {}
 ```
 
 Ensure that the Firebase configuration in `src/environments/environment.ts` is correctly set up for the application to function properly.
+
+
+Respuestas a las siguientes preguntas:
+o ¿Cuáles fueron los principales desafíos que enfrentaste al implementar
+las nuevas funcionalidades?
+
+Primero debo decir que tuve problemas personales.
+
+Feature Flag Implementation:
+Poca familiaridad con este feature, sin embargo, lo que más se me complicó fue que nunca había manejado ionic, aún así, aprendí, no me pareció tan difícil y lo implemente correctamente.
+
+IOS
+No tengo máquina para generar el IPA.
+
+No quiero generar excusas, quiero ser absolutamente sincero, porque creo que tengo las ha+ábilidades para realizar cualquier tipo de proyecto y de no tenerlas, considero también que soy una persona que me gusta aprender y aprendo muy bien y de forma rápida.
+
+
+o ¿Qué técnicas de optimización de rendimiento aplicaste y por qué?
+
+Uso de Observables y operadores de RxJS:
+Se utiliza el operador map de RxJS para transformar el estado de autenticación obtenido de this.firebaseSvc.getAuthState(). Esto permite manejar de manera eficiente los flujos de datos asíncronos y realizar transformaciones sin bloquear el hilo principal.
+
+Carga perezosa (Lazy Loading):
+
+El uso de RouterModule.forChild(routes) permite que el módulo de enrutamiento de la página de registro (SignUpPage) se cargue solo cuando se navega a esa ruta específica. Esto reduce el tiempo de carga inicial de la aplicación al cargar solo los módulos necesarios en el momento adecuado.
+
+Modularización:
+
+Al definir rutas específicas en un módulo separado (SignUpPageRoutingModule), se mejora la organización del código y se facilita el mantenimiento. Esto también permite que Angular optimice la carga de módulos y componentes de manera más eficiente.
+
+Validación de formularios reactivos:
+
+Se utiliza FormGroup y FormControl para definir y gestionar el formulario de registro de manera reactiva. Esto permite una validación eficiente y en tiempo real de los campos del formulario, mejorando la experiencia del usuario al proporcionar retroalimentación inmediata.
+Validadores personalizados:
+
+La implementación de validadores personalizados, como el validador de confirmación de contraseña, asegura que las reglas de validación específicas se apliquen correctamente. Esto reduce la necesidad de validaciones adicionales en el backend, mejorando el rendimiento general de la aplicación.
+Inyección de dependencias:
+
+El uso de la inyección de dependencias para servicios como FirebaseService y UtilsService permite una gestión eficiente de los servicios y facilita la reutilización del código. Esto mejora la modularidad y mantenibilidad del código.
+
+Operaciones asíncronas con async/await:
+
+El uso de async/await para manejar operaciones asíncronas, como la presentación del modal, asegura que el código sea más legible y manejable. Esto también permite una mejor gestión de las promesas y evita bloqueos en el hilo principal.
+
+o ¿Cómo aseguraste la calidad y mantenibilidad del código?
+
+Documentación y comentarios:
+
+Se incluyen comentarios detallados y documentación para los métodos, explicando su propósito y los parámetros que reciben. Esto mejora la comprensión del código y facilita su mantenimiento.
+
+Tipado estricto:
+
+Se utilizan tipos estrictos para los parámetros y los valores de retorno de los métodos ejemplo (Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree>), lo que ayuda a prevenir errores y mejora la robustez del código.
+
+Modularización de métodos:
+
+Se han definido métodos específicos para cada funcionalidad (getUser, getPercetage, addOrUpdateTask). Esto mejora la claridad y la organización del código, facilitando su mantenimiento y comprensión.
+Uso de servicios utilitarios:
+
+Se utiliza utilSvc para manejar operaciones comunes como obtener elementos del almacenamiento local y calcular porcentajes. Esto promueve la reutilización del código y reduce la duplicación, facilitando el mantenimiento.
+
+
+## Git and GitHub Workflow
+
+This section explains how to work with Git and GitHub for the Task Management App repository: https://github.com/JuanseSues/TaskApp
+
+### Cloning the Repository
+
+To get started with the project, clone the repository to your local machine:
+
+```
+git clone https://github.com/JuanseSues/TaskApp.git
+cd TaskApp
+```
+
+
+### Creating a Pull Request
+
+1. Go to the GitHub repository page: https://github.com/JuanseSues/TaskApp
+2. Click on "Pull requests" and then "New pull request"
+
+
