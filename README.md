@@ -248,8 +248,14 @@ export class AppModule {}
 
 Ensure that the Firebase configuration in `src/environments/environment.ts` is correctly set up for the application to function properly.
 
+## Enlaces de descarga de APK
 
-Respuestas a las siguientes preguntas:
+Puedes descargar el archivo APK desde el siguiente enlace:
+
+- [Descargar APK para Android](https://drive.google.com/file/d/1HL-Kj7nmMRPBqDUbBZ4IYO2OkJcX9Vbz/view?usp=sharing)
+
+
+## Respuestas a las siguientes preguntas:
 o ¿Cuáles fueron los principales desafíos que enfrentaste al implementar
 las nuevas funcionalidades?
 
